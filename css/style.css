@@ -1,0 +1,306 @@
+/* regole generali */
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+body {
+	height: 100%;
+	position:absolute;
+	font-weight: 400;
+	line-height: 1.5em;
+	font-family: 'Raleway', sans-serif;
+	font-size:1.1em;
+}
+
+a, a:hover, a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+ul {
+	list-style-type: none;
+}
+
+p {
+	clear: both;
+	margin: 2% 0 1% 0;
+}
+
+.centrato {
+	text-align: center;
+}
+
+.sezioni {
+	/*-webkit-box-shadow: 0px 0px 5px 0.5px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 0px 5px 0.5px rgba(0,0,0,0.57);
+    box-shadow: 0px 0px 5px 0.5px rgba(0,0,0,0.57);*/
+    background-color: #eae8ee;
+	min-height:100%;
+	position:relative;
+	padding-bottom:1%;
+	border-top-width: 5px;
+  	border-top-style: solid;
+  	border-top-color: #9b7348;
+}
+
+
+#immagineLucia{
+	margin: 3%;
+	width: 400px;
+	border-radius: 2%;
+}
+
+#bassorilievo{
+	margin: 3%;
+	width: 480px;
+	border-radius: 2%;
+}
+
+#fasi{
+	margin: 0%;
+	width: 350px;
+	border-radius: 2%;
+}
+
+.txt {
+	padding:0 11.5% 2% 13.5%;
+
+}
+
+#posizionaModello{
+	padding:0 11.5% 2% 13.5%;
+	min-height: 75%;
+	min-width: 75%;
+	position: absolute;
+}
+
+#dove p {
+	text-align: center;
+}
+
+/*intestazioni*/
+h1 {
+	font-weight: 400;
+	font-size: 2.4em;
+	text-align: center;
+	font-family: 'Merriweather', serif;
+	padding: 2% 2% 0 2%;
+	line-height: 1em;
+
+}
+
+h2 {
+	font-size: 1.4em;
+	font-weight: 600;
+	font-family: 'Merriweather', serif;
+}
+
+h2 strong {
+	font-weight: 700;
+}
+
+
+#storia h1, #dove h1, #modello h1, #realizzazione h1, #contatti h1 {
+	margin-bottom: 3%;
+	color: #9b7348;
+}
+
+b{
+	color: #9b7348;
+}
+
+#storia h2, #dove h2, #modello h2, #realizzazione h2, #contatti h2{
+	text-align: center;
+	font-size:1.2em;
+	font-weight: 400;
+}
+
+/*menu*/
+
+.grande {
+	font-variant:small-caps;
+	font-size:1.4em;
+}
+
+.frecce {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width:55px;
+	height:55px;
+	position: fixed;
+	z-index: 100;
+	bottom: 60px;
+	right: 2%;
+	border-radius: 50%;
+	border:0.5px solid black;
+}
+
+#bookmarkMIO {
+	position: absolute;
+	right: 2%;
+	top: 30%;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+	touch-action: none;
+	-ms-touch-action: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+#bookmarkMIO img{
+	margin-bottom: 1px;
+	width: 60px;
+	height: 60px;
+	opacity: 0.6;
+	cursor: pointer;
+	user-drag: none;
+	-webkit-user-drag: none;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+	touch-action: none;
+	-ms-touch-action: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+}
+
+#posizioneCentrale:hover, #posizioneDestra:hover, #posizioneSinistra:hover{
+	opacity: 1;
+}
+
+.provaMenu {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width:55px;
+	height:55px;
+	position: fixed;
+	z-index: 100;
+	left: 30px;
+	right: 1%;
+	border-radius: 50%;
+	border:0.5px solid black;
+}
+
+#refStoria{
+	bottom: 550px;
+	background-image: url("../images/refStoria.png");
+}
+
+#refStoria:hover{
+	background-image: url("../images/refStoriaHover.png");
+}
+
+#refDove{
+	bottom: 480px;
+	background-image: url("../images/refDove.png");
+}
+
+#refDove:hover{
+	background-image: url("../images/refDoveHover.png");
+}
+
+#refModello{
+	bottom: 410px;
+	background-image: url("../images/refModello.png");
+}
+
+#refModello:hover{
+	background-image: url("../images/refModelloHover.png");
+}
+
+#refRealizzazione{
+	bottom: 340px;
+	background-image: url("../images/refRealizzazione.png");
+}
+
+#refRealizzazione:hover{
+	background-image: url("../images/refRealizzazioneHover.png");
+}
+
+#refContatti{
+	bottom: 270px;
+	background-image: url("../images/refContatti.png");
+}
+
+#refContatti:hover{
+	background-image: url("../images/refContattiHover.png");
+}
+
+#frecciaMenu {
+	background-image: url("../images/home.png");
+}
+
+#frecciaMenu:hover {
+	background-image: url("../images/homeHover.png");
+	cursor: pointer;
+}
+
+#social img{
+	display: inline;
+	width: 6%;
+	margin: 2% 1% 0 1%;
+	border-radius: 50%;
+}
+
+#sudime {
+	margin-top: 8%;
+}
+
+
+/*copertina iniziale*/
+#inizio {
+  	position:relative;
+  	width:100%;
+  	max-height: 100vh;
+  	overflow:hidden;
+}
+
+#inizio img {
+	position: relative;
+	max-height: 100%;
+	width:100%;
+	margin-bottom:0;
+	vertical-align: middle;
+}
+
+#copertina {
+	display: block;
+}
+
+#luogoStatua{
+	border:0 ;
+	padding: 1%;
+	width: 65%;
+  	margin: 0 auto;
+
+}
+
+/*media queries*/
+@media screen and (min-width: 1000px) {
+	.Sx {
+		width: 45%;
+   		height: 100%;
+		float:left;
+	}
+
+	.Dx {
+		width: 45%;
+   		height: 100%;
+		float:right;
+	}
+
+	#sudime {
+		margin-top: 31%;
+	}
+
+	#bassorilievo{
+		margin-top: 14%;
+	}
+
+}

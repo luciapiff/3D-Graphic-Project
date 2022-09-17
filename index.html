@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>Scopri lo stemma di Pisa</title>
+	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<!--SPIDERGL-->
+	<script type="text/javascript" src="js/spidergl.js"></script>
+	<!--JQUERY-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<!--PRESENTER-->
+	<script type="text/javascript" src="js/presenter.js"></script>
+	<!--3D MODELS LOADING AND RENDERING-->
+	<script type="text/javascript" src="js/nexus.js"></script>
+	<script type="text/javascript" src="js/ply.js"></script>
+	<!--TRACKBALLS-->
+	<script type="text/javascript" src="js/trackball_turntable.js"></script>
+	<!--<script type="text/javascript" src="js/trackball_turntable_pan.js"></script>-->
+	<script type="text/javascript" src="js/trackball_pantilt.js"></script>
+	<script type="text/javascript" src="js/trackball_sphere.js"></script>
+	<!--UTILITY-->
+	<script type="text/javascript" src="js/init.js"></script>
+
+	<link rel="icon" href="images/icona.ico" type="image/x-icon">
+	<!-- STILE -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="css/3dhop.css"/>
+	
+</head>
+<body>
+	<!--Tasto home-->
+	<a href="#inizio" title="Home"><div class="frecce" id="frecciaMenu"></div></a>
+	
+	<div>
+		<ul>
+		<a href="#storia" title="Informazioni"><li id="refStoria" class="provaMenu"></li></a>
+		<a href="#dove" title="Luogo"><li id="refDove" class="provaMenu"></li></a>
+		<a href="#modello" title="Modello"><li id="refModello" class="provaMenu"></li></a>
+		<a href="#realizzazione" title="Realizzazione"><li id="refRealizzazione" class="provaMenu"></li></a>
+		<a href="#contatti" title ="Contatti"><li id="refContatti" class="provaMenu"></li></a>
+		</ul>
+	</div>
+
+	<div id="inizio">
+		<img id="copertina" src="images/AllascopertadiPisa.png">
+	</div>
+	<div class="sezioni" id="storia">
+		<h1>Informazioni</h1>
+		<div class="txt">
+			<div class="Sx">
+				<p>
+					Passeggiando per Pisa, è impossibile non notare lo <b>stemma della città</b>. Esso, infatti, decora alcune statue, qualche lungarno e, talvolta, persino le strade! <br />
+					Ma qual è la sua <b>origine</b>? 
+				</p>
+				<p>
+					Il primo simbolo pisano fu l'aquila imperiale, nera su fondo oro. Solo successivamente, nel <b>1017</b>, papa <b>Benedetto VIII</b> concesse lo stemma della croce, in occasione della battaglia con i Saraceni in Sardegna. In epoca comunale, fu <b>aggiunto</b>, poi, lo <b>stendardo rosso</b>, simbolo della bandiera imperiale. La composizione finale fu approvata da papa <b>Callisto II</b>.  
+				</p>
+				<p>
+					Alcune leggende, sottolineano il legame religioso, affermendo che, le <b>dodici palle</b> intorno alla croce rappresentano i <b>dodici apostoli</b>.
+				</p>
+				<p>
+					La più <b>antica</b> raffigurazione dello stemma presente nelle mura urbane risale al <b>1156</b>.
+				</p>
+				<p>
+					Osserviamo lo stemma più da vicino, prendendo in esame il <b>bassorilievo</b>, situato nella Cattedrale di Pisa.
+				</p>
+			</div>
+			<div class="Dx centrato">
+				<img src="images/bassorilievo.jpg" id="bassorilievo">
+			</div>		
+		</div>
+	</div>
+	<div class="sezioni" id="dove">
+		<h1>Dove si trova?</h1>
+		<div class="txt">
+			<p>
+				Il bassorilievo è situato in possimità del transetto destro della <b>Cattedrale di Pisa</b>, occupato dalla Cappella di San Ranieri. <br />
+				<iframe id="luogoStatua" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.3867994680418!2d10.393670251188833!3d43.72329095581084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d591a75ee2ab3f%3A0x4b36a82a6d1281e1!2sCattedrale%20di%20Pisa!5e0!3m2!1sit!2sit!4v1632248706996!5m2!1sit!2sit" width="600" height="450" allowfullscreen="" loading="lazy"></iframe> <br />
+				Attualmente la zona <b>non è visitabile</b> al pubblico e per questo motivo si è scelto di riprodurne uno degli elementi decorativi più importanti.
+			</p>
+		</div>
+	</div>
+	<div class="sezioni" id="modello">
+		<h1>Il modello</h1>
+			<div id="posizionaModello">
+			<div id="3dhop" class="tdhop"><div id="tdhlg"></div>
+				 <div id="toolbar">
+				  <img id="home"        title="Home"                   src="skins/dark/home.png"/><br/>
+				<!--ZOOM-->
+				  <img id="zoomin"      title="Zoom In"                src="skins/dark/zoomin.png"/><br/>
+				  <img id="zoomout"     title="Zoom Out"               src="skins/dark/zoomout.png"/><br/>
+				<!--ZOOM-->
+				<!--LIGHTING-->
+				  <img id="lighting_off" title="Enable Lighting"       src="skins/dark/lighting_off.png" style="position:absolute; visibility:hidden;"/>
+				  <img id="lighting"     title="Disable Lighting"      src="skins/dark/lighting.png"/><br/>
+				<!--LIGHTING-->
+				<!--LIGHT-->
+				  <img id="light_on"    title="Disable Light Control"  src="skins/dark/lightcontrol_on.png" style="position:absolute; visibility:hidden;"/>
+				  <img id="light"       title="Enable Light Control"   src="skins/dark/lightcontrol.png"/><br/>
+				<!--LIGHT-->
+				<!--MEASURE-->
+				  <img id="measure_on"  title="Disable Measure Tool"   src="skins/dark/measure_on.png" style="position:absolute; visibility:hidden;"/>
+				  <img id="measure"     title="Enable Measure Tool"    src="skins/dark/measure.png"/><br/>
+				<!--MEASURE-->
+				<!--CAMERA-->
+				  <img id="perspective"  title="Perspective Camera"    src="skins/dark/perspective.png" style="position:absolute; visibility:hidden;"/>
+				  <img id="orthographic" title="Orthographic Camera"   src="skins/dark/orthographic.png"/><br/>
+				<!--CAMERA-->
+				<!--SCREENSHOT-->
+				  <img id="screenshot" title="Save Screenshot"   src="skins/dark/screenshot.png"/><br/>
+				<!--SCREENSHOT-->
+				<!--FULLSCREEN-->
+				  <img id="full_on"     title="Exit Full Screen"       src="skins/dark/full_on.png" style="position:absolute; visibility:hidden;"/>
+				  <img id="full"        title="Full Screen"            src="skins/dark/full.png"/> <br />
+				<!--FULLSCREEN-->
+
+				 </div>
+
+				 <!--BOOKMARK-->
+				 <div id="bookmarkMIO">
+				 	<img id="posizioneDestra" onclick="presenter.animateToTrackballPosition([ 40, 5.354745748886224, 0.8 ])" title="posizione destra" src="images/destra.png"/> <br />
+				 	<img id="posizioneCentrale" onclick="presenter.animateToTrackballPosition([ 0.5583599644545582, -13.365316682566982, 0.8857350000000002 ])" title="Posizione centrale" src="images/centraleHover.png"/> <br />
+				 	<img id="posizioneSinistra" onclick="presenter.animateToTrackballPosition([ -40, 6.647576628589654, 0.8 ])" title="Posizione sinistra" src="images/sinistra.png"/> <br />
+				 </div>
+				 <!--BOOKMARK-->
+
+				<!--MEASURE-->
+				 <div id="measure-box" class="output-box">Lunghezza misurata<hr/><span id="measure-output" class="output-text" onmousedown="event.stopPropagation()">0.0</span></div>
+				<!--MEASURE-->
+
+				 <canvas id="draw-canvas" style="background-image: url(skins/backgrounds/lightNew.jpg)"/>
+
+			</div>
+			</div>
+	</div>
+	<div class="sezioni" id="realizzazione">
+		<h1>
+			Realizzazione del modello 3D
+		</h1>
+		<div class="txt">
+			<div class="Sx">
+				<p> Per la realizzazione del modello 3D del bassorilievo sono stati seguiti i seguenti step:
+					<ol>
+						<li>Raccolta di un set di <b>80 foto</b> del bassorilievo;</li>
+						<li><b>Allineamento delle foto</b> e creazione della <b>nuvola sparsa</b> su <b>Metashape</b>;</li>
+						<li>Creazione della <b>nuvola densa</b>, settando la qualità massima, sempre su <b>Metashape</b>;</li>
+						<li><b>Pulizia</b> della nuvola densa e creazione della <b>superficie</b> tramite Poisson (settando reconstruction depth a 10) su <b>Meshlab</b>;</li>
+						<li>Miglioramenti del modello su <b>Meshlab</b>: in particolare, smoothing, rimozione dei pezzi isolati, ecc.;</li>
+						<li>Costruzione della <b>texture</b> su <b>Metashape</b> (settando texture size/count a 4096);</li>
+						<li>Sistemazione della <b>scala</b> del modello in <b>mm</b> e orientamento degli <b>assi</b> su <b>MeshLab</b>;</li>
+						<li>Conversione del modello in <b>multirisoluzione</b> tramite <b>Visual Media Service</b>;</li>
+						<li>Visualizzazione online tramite <b>3dhop</b>!</li>
+					</ol>
+				</p>
+			</div>
+			<div class="Dx centrato">
+				<img src="images/fasi.png" id="fasi">
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="sezioni" id="contatti">
+		<h1>L'autrice</h1>
+		<div class="txt">
+				<div class="Sx">
+					<p id="sudime">
+						Classe '97, appassionata di teatro, cinema, letteratura, musica ed arte. <br />
+						È probabile trovarla con una chitarra tra le braccia o con una matita in mano. <br />
+						Attratta fin da bambina dalla tecnologia, decide di conciliare le sue passioni iscrivendosi a Informatica Umanistica.
+					</p>
+					<div id="social" class="centrato">
+					<a target="_blank" rel="noopener noreferrer"  href="mailto:l.pifferi@studenti.unipi.it"><img title="Email" src="images/email.png"></a>
+					<a href="https://twitter.com/Luciapiff" target="_blank" rel="noopener noreferrer"><img title="Twitter" src="images/twitter.png"></a>
+					<a href="https://www.facebook.com/Luciapiff/" target="_blank" rel="noopener noreferrer"><img title="Facebook" src="images/facebook.png"></a>
+					</div>
+				</div>
+				<div class="Dx centrato"> <img src="images/LP.jpg" id="immagineLucia"></div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+var presenter = null;
+
+function setup3dhop() {
+	presenter = new Presenter("draw-canvas");
+
+	presenter.setScene({
+		meshes: {
+			"mesh_1" : { url: "models/stemmapisa.nxs" }
+		},
+		modelInstances : {
+			"model_1" : { 
+				mesh  : "mesh_1"
+			}
+		},
+		trackball: {
+			type : TurnTableTrackball,
+			trackOptions : {
+				startPhi: 0,
+				startTheta: 0,
+				startDistance: 1.5,
+				minMaxPhi: [-40, 40],
+				minMaxTheta: [-30.0, 30.0],
+				minMaxDist: [0.8, 1.8]
+			}
+		}
+	});
+
+//--MEASURE--
+	presenter._onEndMeasurement = onEndMeasure;
+//--MEASURE--
+
+
+}
+
+function actionsToolbar(action) {
+	if(action=='home') presenter.animateToTrackballPosition([ 0, 0, 1.5 ]);
+//--FULLSCREEN--
+	else if(action=='full'  || action=='full_on') fullscreenSwitch();
+//--FULLSCREEN--
+//--ZOOM--
+	else if(action=='zoomin') presenter.zoomIn();
+	else if(action=='zoomout') presenter.zoomOut();
+//--ZOOM--
+//--LIGHTING--
+	else if(action=='lighting' || action=='lighting_off') { presenter.enableSceneLighting(!presenter.isSceneLightingEnabled()); lightingSwitch(); }
+//--LIGHTING--
+//--LIGHT--
+	else if(action=='light' || action=='light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
+//--LIGHT--
+//--CAMERA--
+	else if(action=='perspective' || action=='orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
+//--CAMERA--
+
+//--MEASURE--
+	else if(action=='measure' || action=='measure_on') { presenter.enableMeasurementTool(!presenter.isMeasurementToolEnabled()); measureSwitch(); }
+//--MEASURE--
+
+//--SCREENSHOT--
+	else if(action=='screenshot') presenter.saveScreenshot();
+//--SCREENSHOT--
+	
+}
+
+//--MEASURE--
+function onEndMeasure(measure) {
+	// measure.toFixed(2) sets the number of decimals when displaying the measure
+	// depending on the model measure units, use "mm","m","km" or whatever you have
+	$('#measure-output').html(measure.toFixed(2) + "mm"); 
+}
+//--MEASURE--
+
+
+
+$(document).ready(function(){
+	init3dhop();
+
+	setup3dhop();
+});
+</script>
+</html>
